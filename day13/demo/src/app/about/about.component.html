@@ -1,0 +1,56 @@
+<!-- <div class="container" style="width: 400px;">
+
+
+    <h4>
+
+        About Table</h4>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+
+                <th scope="col">Name</th>
+                <th scope="col">Department</th>
+                <th scope="col">ID</th>
+            </tr>
+        </thead>
+        <tbody> -->
+<!-- <tr>
+                <th scope="row">1</th>
+                <td>Uma</td>
+                <td>CS</td>
+                <td>101</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Seema</td>
+                <td>CS</td>
+                <td>102</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Sapna</td>
+                <td>CS</td>
+                <td>103</td>
+            </tr> -->
+
+<!-- <tr *ngFor="let v of values">
+    <td>{{v.name}}</td>
+    <td>{{v.dept}}</td>
+    <td>{{v.id}}</td>
+</tr>
+</tbody>
+
+</table>
+</div> -->
+
+<div style="margin-top: 10%;width: 50%;margin-left: 15%;" class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">Employee Name</span>
+    </div>
+    <input type="text" aria-label="First name" class="form-control" #button>
+
+</div><br><br><br>
+<button style="margin-left: 35%;" type="button" class="btn btn-primary btn-lg" (click)="CreateId()"> Create ID</button>
+<div style="margin-left:30%;padding: 30px;">
+    <h6>{{output}}</h6>
+</div>

@@ -1,0 +1,15 @@
+.para1 {
+    font-size: x-large;
+    font-weight: 800;
+    color: green;
+    background-color: lightpink;
+    display: inline-block;
+}
+
+.para2 {
+    font-size: larger;
+    font-weight: 1000;
+    color: red;
+    background-color: lightgreen;
+    display: inline-block;
+}

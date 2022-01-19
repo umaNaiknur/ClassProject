@@ -1,0 +1,27 @@
+<p>parent works!</p>
+
+<!-- <app-child [product]="salesProduct">
+    <h3>Sales product</h3>
+    <a class="link" href="#">Go other section</a></app-child>
+
+
+
+<app-child [product]="marketProduct">
+    <marquee behaviour="scroll">
+        <h3>Market product</h3>
+    </marquee>
+    <a class="link" href="#">Go other section</a>
+</app-child> -->
+
+<button (click)="toggleChild()">Toggle-case</button>
+<input type="text" [(ngModel)]="name">{{name}}
+<div>
+
+    <h3 #header>Techno Elevate</h3>
+    <p #header>New projection</p>
+    <!-- <p #header>Angular Class</p> -->
+</div>
+<app-child *ngIf="value" [name1]="name">
+    <h4 #header>Content projection</h4>
+
+</app-child>

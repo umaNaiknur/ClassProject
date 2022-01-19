@@ -1,0 +1,7 @@
+<p>parent works!</p>
+
+<button (click)="toggleCase()">Click_Me</button>
+<input type="text" [(ngModel)]="name">{{name}}
+<app-child *ngIf="value" [name]="name">
+    <h3>{{name}}</h3>
+</app-child>

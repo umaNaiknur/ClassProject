@@ -1,0 +1,120 @@
+<!-- <h1>Angular class</h1> -->
+<!-- property binding -->
+<!-- <h6>----------Property_Binding----------</h6><br> -->
+<input type="text" [value]="val">
+<!-- interpolation binding -->
+<h6>----------Interpolation_Binding----------</h6><br>
+<h1>{{2+3}}</h1>
+
+
+<!-- style binding -->
+<h6>----------Style_Binding---------</h6><br>
+
+<!-- <h3 [style.color]="isSpecial?c1:c2">Data Binding</h3> -->
+
+<!-- class binding -->
+<!-- <h6>----------Class_Binding---------</h6><br> -->
+<!-- <p [class]="isSpecial?'para1':'para2'">Class binding</p> -->
+
+<!-- <h6>----------Attribute_Binding---------</h6><br> -->
+<!-- <table border="5px" style="border-radius: 10px; border-color: cornflowerblue;padding: 5px;background-color: rgb(210, 231, 240);" cellspacing="5px"> -->
+
+<!-- <tr>
+        <th colspan="2">Players</th>
+    </tr>
+    <tr>
+
+        <td style="padding: 5px;">Virat</td>
+        <td>Kohli</td>
+    </tr>
+    <tr>
+        <td style="padding: 5px;">Rohit</td>
+        <td>Sharma</td>
+    </tr>
+
+
+</table><br><br> -->
+<!-- event Binding -->
+<!-- <h6>----------Event_Binding---------</h6><br>
+<button (click)="display()">Click Me</button><br><br>
+<input type="text" [(ngModel)]="displayResult">
+<h3>{{displayResult}}</h3> -->
+
+
+component communication
+<h6>----------Component_Binding---------</h6><br>
+
+<app-login [valueChild]="val"></app-login>
+
+<app-parent></app-parent>
+<app-big></app-big>
+<app-parent1></app-parent1>
+
+
+
+
+<!--  <button (click)="onsubmit()">show me</button>
+<p *ngIf='value'> This is toggle case</p>
+<ul>
+
+    <li *ngFor="let user of users">{{user.name}},{{user.age}},{{user.id}}
+    </li>
+
+</ul> -->
+
+
+
+<!-- <table border="2px">
+    <th colspan="3">Details</th>
+
+
+    <tr *ngFor="let user of users">
+
+        <td> {{user.name}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.id}}</td>
+
+
+    </tr>
+
+</table> -->
+
+
+
+
+<!-- <div [ngSwitch]="selectedCountry">
+    <div *ngSwitchCase="'India'">
+        <h1 style="color: orange;">India has been selected</h1>
+    </div>
+
+    <div *ngSwitchCase="'China'">
+        <h5>China has been selected</h5>
+    </div>
+
+    <div *ngSwitchCase="'UK'">
+        <h5>UK has been selected</h5>
+    </div>
+
+    <div *ngSwitchCase="'aust'">
+        <h5>aust has been selected</h5>
+    </div>
+
+    <div *ngSwitchDefault>
+        <h5>No Conuntry has been selected.<br>
+            <h2>Thank You</h2>
+        </h5>
+    </div>
+
+</div>
+
+
+<button (click)="onSubmit1()"></button>
+<p *ngIf='val3'>This is my page</p>
+
+<table border="2px">
+
+    <tr *ngFor="let arrays of arr1">
+        <td>{{arrays.name}}</td>
+
+    </tr>
+</table> -->

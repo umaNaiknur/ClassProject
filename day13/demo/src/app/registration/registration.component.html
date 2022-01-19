@@ -1,0 +1,81 @@
+<p>registration works!</p>
+
+<div class="container" style="margin-left:500px;">
+    <div class="col-md-6">
+        <form #regForm="ngForm" (ngSubmit)="onSubmit(regForm)" style="border: 3px solid grey;background-color: rgb(236, 245, 245); padding: 20px;  box-shadow: 0px 0px 20px  grey;">
+            <div class="form-group">
+                <label for="exampleInputEmail1">First Name</label>
+                <input name=fname #fname="ngModel" placeholder="Enter First Name" required minlength="6" maxlength="10" pattern="^[a-zA-Z\s]+$" type=" email " class="form-control " ngModel>
+                <span style="color: red;margin-left: 150px;" *ngIf="fname.invalid && fname.touched ">Enter a valid first Name!!!</span>
+
+            </div>
+            <div class="form-group ">
+                <label for="exampleInputPassword1 ">Last Name</label>
+                <input name=lname #lname="ngModel" placeholder="Enter Last Name" required minlength="4" maxlength="15" type=" text " class="form-control " ngModel>
+                <span style="color: red;margin-left: 150px; " *ngIf="lname.invalid && lname.touched ">Enter valid last name!!!</span>
+            </div>
+
+            <div class="form-group " style="display: flex;">
+                <label for="exampleInputPassword1 ">Gender </label><br> Female: <input style="width: 60px;box-shadow: 0px 0px 0px grey; margin-left: 20px;margin-top: 15px;margin-right: 10px;" value="female" name=gender #gender="ngModel" type="radio" class="form-control "
+                    ngModel><br> Male:
+                <input style="width: 60px;box-shadow: 0px 0px 0px grey; margin-left: 20px;margin-top: 15px;" value="male" name=gender #gender="ngModel" type="radio" class="form-control " ngModel>
+
+            </div>
+
+
+
+
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Select Technology</label>
+                <select class="form-control" id="exampleFormControlSelect1" name=lang #lang="ngModel" required ngModel>
+                  <option for="#">Type Script</option>
+                  <option for="#">Angular</option>
+                  <option for="#">Mongo DB</option>
+                  <option for="#">Node js</option>
+                  <option for="#">Java Script</option>
+                </select>
+                <span style="color: red; margin-left: 150px;" *ngIf="lang.invalid && lang.touched ">Please Select!!!</span>
+            </div>
+
+            <div class="form-group ">
+                <label for="exampleInputPassword1 ">Contact</label>
+                <input name=number #number="ngModel" placeholder="Enter Contact Number" pattern="(0|91)?[7-9][0-9]{9}" required type="number" class="form-control " ngModel>
+                <span style="color: red;margin-left: 150px; " *ngIf="number.invalid && number.touched ">Enter valid Number!!!</span>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Address</label>
+                <textarea name=address #address="ngModel" placeholder="Enter Address" class="form-control" id="exampleFormControlTextarea1" rows="3" cols="10" ngModel required></textarea>
+                <span style="color: red;margin-left: 150px;" *ngIf="address.invalid && address.touched ">Enter valid Address!!!</span>
+
+            </div>
+
+            <div class="form-group ">
+                <div ngModelGroup="Address">
+                    <input type="text" name="city" #city="ngModel" placeholder="Enter Your City-" class="form-control" required ngModel><br>
+                    <span style="color: red;margin-left: 150px;" *ngIf="city.invalid && city.touched ">Enter valid City!!!</span>
+
+                    <input type="text" name="state" #state="ngModel" placeholder="Enter Your State-" class="form-control" required ngModel>
+                    <span style="color: red;margin-left: 150px;" *ngIf="state.invalid && state.touched ">Enter valid State!!!</span>
+
+                </div>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <label class="form-check-label" for="inlineCheckbox1" style="margin-left: 90px;">SQL</label>
+                <input type="checkbox" style="box-shadow: 0px 0px 0px grey;float: none;width: 30px;height: 18px; margin-left: 10px;" name=sql #sql="ngModel" class="form-check-input " id="inlineCheckbox1 " value="SQL " ngModel>
+                <br> <label class="form-check-label " for="inlineCheckbox1 ">Oracle</label>
+                <input type="checkbox" style="box-shadow: 0px 0px 0px grey;float: none;width: 30px;height: 18px;margin-left: 10px;" name=oracle #oracle="ngModel" class="form-check-input " id="inlineCheckbox1 " value="Oracle " ngModel>
+                <br><label class="form-check-label " for="inlineCheckbox1 ">NoSQL</label>
+                <input type="checkbox" style="box-shadow: 0px 0px 0px grey;float: none;width: 30px;height: 18px;margin-left: 10px; " name=nosql #nosql="ngModel" class="form-check-input " id="inlineCheckbox1 " value="Nosql " ngModel>
+
+
+            </div><br>
+
+            <button [disabled]="regForm.invalid" type=" submit " style="margin-left: 170px;margin-top: 15px;" class="btn btn-primary ">Submit</button>
+        </form>
+    </div>
+</div>
+<h3>{{regForm.value|json}}</h3>
